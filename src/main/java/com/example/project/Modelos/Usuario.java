@@ -32,10 +32,10 @@ public class Usuario {
     @Column(name = "telefono")
     private String telefono;
 
-    // @ManyToOne(fetch = FetchType.EAGER, optional = false)
-    // @JoinColumn(name="rol_id", nullable=false)
-    // @OnDelete(action = OnDeleteAction.CASCADE)
-    // private Rol rol;
+    @ManyToOne(fetch = FetchType.EAGER, optional = false)
+    @JoinColumn(name="rol_id", nullable=false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    private Rol rol;
 
     public Usuario() {
     }
